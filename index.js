@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 18;
+if(votingAge >= 18){
+  console.log(true) ;
+}
 
 
 /*
@@ -31,7 +34,12 @@ Do the following:
    HINT: no function required
 */
 
+let fruit = 'apple'
+let drink = 'soda'
 
+if(fruit === 'apple'){
+  console.log('good')
+}
 
 
 
@@ -46,7 +54,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+let x = "1999";
+x.toString(-1999);
 
+console.log(x) ;
 
 
 /*
@@ -58,8 +69,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a*b;
   }
 
 
@@ -74,8 +85,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanYears ,dogYears){
+    return humanYears*dogYears;
 }
 
 
@@ -107,9 +118,25 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(lbs,years){
+    if(years >= 1 && lbs <= 5){
+      return lbs * 0.05;
+    }else if(years >=1 && lbs <= 10){
+      return lbs * 0.04;
+    }else if (years >=1 && lbs <= 15){
+      return lbs * 0.03;
+    }else if (years>=1 && lbs > 15){
+    return lbs * 0.02;
+    }else if(years>=0.16 && years <=0.33){
+      return lbs * .10;
+    }else if (years>= 0.33 && years <=0.58){
+      return lbs * 0.05;
+    }else if (years >= 0.58 && years < 1){
+        return lbs * 0.04;
+    }
   }
+      console.log(hungryDog(12,3))
+    
 
 
 
@@ -153,7 +180,7 @@ function game(user, computer){
    }else if(user === 'scissors' && computer === 'paper'){
      return `you win!`;
    }else{
-     return `you lose`
+     return `you lose`;
    }
    
 }
@@ -172,9 +199,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(kilometers){
+    return kilometers * 0.621371;
+}
+console.log(miles(50))
 
 
 
